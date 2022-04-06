@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Nunito:wght@300;400;700&family=Supermercado+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  scroll-behavior: smooth;
+}
+
+.dot-box{
+  height: 100vh;
+}
+
+.dot {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* .dot:hover{
+  background-color: red;
+} */
+
+.display{
+ width: 160px;
+}
+
+#index{
+  width: 0%;
+}
+
+p{
+  font-size: 0.8rem;
+}
+
+.hex{
+  font-size: 1.2rem;
+}
