@@ -27,7 +27,7 @@ let set = (i, j) => {
 let reset = () => {
   setInitialVariable();
   start();
-  Genarate();
+  Genarate_reset();
 };
 
 let isVisit,hasrow;
