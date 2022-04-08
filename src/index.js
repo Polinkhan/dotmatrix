@@ -21,7 +21,7 @@ let set = (i, j) => {
   j = 7 - j;
   isVisit[i][j] = 1 - isVisit[i][j];
   document.querySelectorAll(".bVal")[i].innerText = sum(i, j).row;
-  document.querySelectorAll(".cVal")[j].innerText = sum(i, j).col;
+  document.querySelectorAll(".cVal")[7-j].innerText = sum(i, j).col;
 };
 
 let reset = () => {
