@@ -4,16 +4,16 @@ let add = (index) => {
     dom += `<div class="col-1 px-0 my-auto"><div class="dot mx-auto rounded-circle border" 
     onclick="set(${index},${i})"></div></div>`;
   }
-  return `<div class="col-2 my-2">
+  return `<div class="col-2 p-0 my-2">
     <p class="m-0">b${7 - index} = <span class="bVal">1<span></p>
     </div>
     ${dom}
-    <div id="index" class="col-2 my-2"><p class="m-0">row ${index}</p></div>`;
+    <div id="index" class="col-2 p-0 my-2"><p class="m-0">row ${index}</p></div>`;
 };
 
 let dom = ``;
 for (let i = 0; i < 8; i++) {
-  dom += `<div class="col-1 my-auto"><div class=" mx-auto"><p>c${i} ↓ <span class="cVal">0<span></p></div></div>`;
+  dom += `<div class="col-1 p-2 my-auto"><div class="mx-auto"><p class = "m-0">c${i} ↓ <span class="cVal">0<span></p></div></div>`;
 }
 
 let start = () => {
