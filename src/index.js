@@ -21,7 +21,7 @@ let set = (i, j) => {
   j = 7 - j;
   isVisit[i][j] = 1 - isVisit[i][j];
   document.querySelectorAll(".bVal")[i].innerText = sum(i, j).row;
-  document.querySelectorAll(".cVal")[7-j].innerText = sum(i, j).col;
+  document.querySelectorAll(".cVal")[7 - j].innerText = sum(i, j).col;
 };
 
 let reset = () => {
@@ -30,6 +30,14 @@ let reset = () => {
   Genarate_reset();
 };
 
-let isVisit,hasrow;
-setInitialVariable();
+let copy = () => {
+  let r = document.createRange();
+  r.selectNode(document.getElementById("code"));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+};
 
+let isVisit, hasrow;
+setInitialVariable();
