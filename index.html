@@ -17,37 +17,39 @@
     <title>Document</title>
   </head>
   <body class="">
-
-    <div class="container dot-box flex-column d-flex align-items-center">
-      <div class="display border my-5 text-center fw-bold">
-        <p class="hex m-0 p-3 pb-0">b hex : 0<span id="B">ff</span>h</p>
-        <p class="bi m-0 p-1 pb-0 text-danger">bi : <span id="B-b">11111111</span></p>
-        <p class="hex m-0 p-3 pb-0">c hex : 0<span id="C">00</span>h</p>
-        <p class="bi m-0 p-1 text-danger">bi : <span id="C-b">00000000</span></p>
-      </div>
-
-      <div class="row border text-center">
+    <div class="container mt-5 dot-box flex-column d-flex align-items-center">
+      <div class="row border py-3 text-center">
         <!-- row start -->
         <!-- row end -->
       </div>
 
-      <div class="btn border bg-danger fw-bold text-white my-3" onclick="reset()">
-        reset
+      <div class="d-flex">
+        <div class="m-3 text-center" onclick="reset()">
+          <button class="btn border bg-danger fw-bold text-white">Reset</button>
+        </div>
+        <div class="m-3 text-center" onclick="Genarate()">
+          <button class="btn border bg-success fw-bold text-white">Genarate Code</button>
+        </div>
+      </div>
+
+      <div  class="">
+        <p id="code" class="m-0 border"></p>
       </div>
 
     </div>
 
     <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"
-  ></script>
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script type="" src="src/index.js"></script>
-    <script type="" src="src/build.js"></script>
+    <script  src="src/index.js"></script>
+    <script  src="src/build.js"></script>
+    <script  src="src/asmcode.js"></script>
   </body>
 </html>

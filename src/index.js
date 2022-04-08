@@ -1,24 +1,34 @@
-let bArray = [1,1,1,1,1,1,1,1];
-let cArray = [0,0,0,0,0,0,0,0];
+let setInitialVariable = () => {
+  isVisit = [];
+  hasrow = [];
+  for (let i = 0; i < 8; i++) {
+    isVisit.push([0, 0, 0, 0, 0, 0, 0, 0]);
+    hasrow.push(0);
+  }
+};
 
-let set = (i,j)=>{
-  document.querySelectorAll(".bVal")[i].innerText = "0";
-  document.querySelectorAll(".cVal")[j].innerText = "1";
-  bArray[7-i] = 0;
-  cArray[j] = 1;
+let sum = (i, j) => {
+  let val = { row: 1, col: 0 };
+  for (let k = 0; k < 8; k++) {
+    if (isVisit[i][k] == 1) val.row = 0;
+    if (isVisit[k][j] == 1) val.col = 1;
+  }
+  hasrow[i] = 1 - val.row;
+  return val;
+};
 
-  document.querySelector("#B").innerText = parseInt(bArray.join(""),2).toString(16);
-  document.querySelector("#B-b").innerText = bArray.join("");
-  document.querySelector("#C").innerText = parseInt(cArray.join(""),2).toString(16);
-  document.querySelector("#C-b").innerText = cArray.join("");
-}
+let set = (i, j) => {
+  isVisit[i][7-j] = 1 - isVisit[i][7-j];
+  document.querySelectorAll(".bVal")[i].innerText = sum(i, j).row;
+  document.querySelectorAll(".cVal")[j].innerText = sum(i, j).col;
+};
 
-let reset = ()=>{
-  bArray = [1,1,1,1,1,1,1,1];
-  cArray = [0,0,0,0,0,0,0,0];
-  document.querySelector("#B").innerText = "ff";
-  document.querySelector("#B-b").innerText = "11111111";
-  document.querySelector("#C").innerText = "00";
-  document.querySelector("#C-b").innerText = "00000000";
+let reset = () => {
+  setInitialVariable();
   start();
-}
+  Genarate();
+};
+
+let isVisit,hasrow;
+setInitialVariable();
+
