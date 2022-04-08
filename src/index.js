@@ -11,7 +11,7 @@ let sum = (i, j) => {
   let val = { row: 1, col: 0 };
   for (let k = 0; k < 8; k++) {
     if (isVisit[i][k] == 1) val.row = 0;
-    if (isVisit[k][j] == 1) val.col = 1;
+    if (isVisit[k][7-j] == 1) val.col = 1;
   }
   hasrow[i] = 1 - val.row;
   return val;
