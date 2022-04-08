@@ -8,12 +8,12 @@ let add = (index) => {
     <p class="m-0">b${7 - index} = <span class="bVal">1<span></p>
     </div>
     ${dom}
-    <div id="index" class="col-2 my-2"><p class="m-0">a${7 - index} = 1</p></div>`;
+    <div id="index" class="col-2 my-2"><p class="m-0">row ${index}</p></div>`;
 };
 
 let dom = ``;
 for (let i = 0; i < 8; i++) {
-  dom += `<div class="col-1 my-auto"><div class=" mx-auto"><p>c${i} = <span class="cVal">0<span></p></div></div>`;
+  dom += `<div class="col-1 my-auto"><div class=" mx-auto"><p>c${i} ↓ <span class="cVal">0<span></p></div></div>`;
 }
 
 let start = () => {
