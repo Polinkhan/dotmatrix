@@ -18,7 +18,8 @@ let sum = (i, j) => {
 };
 
 let set = (i, j) => {
-  isVisit[i][7-j] = 1 - isVisit[i][7-j];
+  j = 7 - j;
+  isVisit[i][j] = 1 - isVisit[i][j];
   document.querySelectorAll(".bVal")[i].innerText = sum(i, j).row;
   document.querySelectorAll(".cVal")[j].innerText = sum(i, j).col;
 };
